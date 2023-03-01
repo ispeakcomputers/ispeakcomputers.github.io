@@ -1,25 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Bio Data</title>
+	<title>Bio Data</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f0f0f0;
+		}
+		h1, h2 {
+			text-align: center;
+			margin-top: 30px;
+		}
+		h2 {
+			font-size: 24px;
+		}
+		table {
+			margin: 30px auto;
+			border-collapse: collapse;
+			background-color: white;
+			box-shadow: 0px 0px 5px grey;
+		}
+		td, th {
+			padding: 10px;
+			border: 1px solid black;
+		}
+		td {
+			text-align: center;
+		}
+	</style>
 </head>
 <body>
-	<h1>My Bio Data</h1>
-	<p><strong>Name:</strong> John Doe</p>
-	<p><strong>Date of Birth:</strong> January 1, 1990</p>
-	<p><strong>Address:</strong> 123 Main St, Anytown, USA</p>
-	<p><strong>Email:</strong> johndoe@email.com</p>
-	<p><strong>Phone:</strong> 555-123-4567</p>
+	<h1>Bio Data</h1>
+	<h2>Personal Information</h2>
+	<table>
+		<tr>
+			<th>Name</th>
+			<td>John Smith</td>
+		</tr>
+		<tr>
+			<th>Date of Birth</th>
+			<td>January 1, 1990</td>
+		</tr>
+		<tr>
+			<th>Address</th>
+			<td>123 Main St, Anytown, USA</td>
+		</tr>
+		<tr>
+			<th>Phone Number</th>
+			<td>(123) 456-7890</td>
+		</tr>
+		<tr>
+			<th>Email Address</th>
+			<td>john.smith@example.com</td>
+		</tr>
+	</table>
 	<h2>Education</h2>
-	<ul>
-		<li>Bachelor's Degree in Computer Science, University of Anytown, 2012-2016</li>
-		<li>Master's Degree in Business Administration, Anytown Business School, 2017-2019</li>
-	</ul>
-	<h2>Experience</h2>
-	<ul>
-		<li>Software Engineer, ABC Company, 2016-2017</li>
-		<li>Product Manager, XYZ Corporation, 2019-2021</li>
-		<li>Business Development Manager, Acme Industries, 2021-Present</li>
-	</ul>
+	<table>
+		<tr>
+			<th>Degree</th>
+			<th>Field of Study</th>
+			<th>Institution</th>
+			<th>Graduation Date</th>
+		</tr>
+		<tr>
+			<td>Bachelor of Science</td>
+			<td>Computer Science</td>
+			<td>University of Anytown</td>
+			<td>May 2012</td>
+		</tr>
+		<tr>
+			<td>Master of Business Administration</td>
+			<td>Business Administration</td>
+			<td>Anytown Business School</td>
+			<td>June 2016</td>
+		</tr>
+	</table>
+	<h2>Work Experience</h2>
+	<table>
+		<tr>
+			<th>Position</th>
+			<th>Company</th>
+			<th>Location</th>
+			<th>Employment Dates</th>
+			<th>Responsibilities</th>
+		</tr>
+		<tr>
+			<td>Software Engineer</td>
+			<td>Acme Corporation</td>
+			<td>Anytown, USA</td>
+			<td>2012-2016</td>
+			<td>Developed software applications for clients in various industries.</td>
+		</tr>
+		<tr>
+			<td>Product Manager</td>
+			<td>Globex Corporation</td>
+			<td>Springfield, USA</td>
+			<td>2016-present</td>
+			<td>Managed development and launch of new products.</td>
+		</tr>
+	</table>
 </body>
 </html>
