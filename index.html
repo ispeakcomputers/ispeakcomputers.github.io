@@ -1,46 +1,45 @@
-
+html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beautiful Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .spotify-widget {
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>My Portfolio</h1>
     </header>
-    <section id="home">
-        <h1>Welcome to Our Beautiful Website</h1>
-        <p>Your captivating and engaging content goes here.</p>
-        <a href="#contact" class="btn">Contact Us</a>
-    </section>
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Tell your unique story and mission here.</p>
-    </section>
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <p>Showcase your work and achievements.</p>
-    </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Contact information and a contact form can be placed here.</p>
-    </section>
-    <footer>
-        <p>&copy; 2023 Beautiful Website</p>
-    </footer>
+
+    <main>
+        <h2>About Me</h2>
+        <p>Hi, I'm a web developer with a passion for music. In my free time, I enjoy listening to music and discovering new artists.</p>
+
+        <h2>My Favorite Songs</h2>
+        <div class="spotify-widget">
+            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+    </main>
 </body>
 </html>
-```
-
-
-
