@@ -93,3 +93,130 @@
     </script>
 </body>
 </html>
+
+
+<div class="container">
+    <section class="section hidden">
+        <h2>Contact Information</h2>
+        <p>Location: Jaipur, India</p>
+        <p>Phone: +91 98975-77007</p>
+        <p>Email: aavkjain@hotmail.com</p>
+        <p>Website: <a href="https://ispeakcomputers.github.io">https://ispeakcomputers.github.io</a></p>
+    </section>
+
+    <section class="section hidden">
+        <h2>Professional Summary</h2>
+        <p>Cyber security enthusiast with over 4.6 years of experience in monitoring, detecting, analyzing, and responding to cyber threats and incidents. Skilled in using various security tools and technologies, such as SIEM, IDS/IPS, firewall, antivirus, and vulnerability scanner. Proficient in conducting security research, threat intelligence, incident response, and forensic analysis.</p>
+    </section>
+
+    <section class="section hidden">
+        <h2>Skills</h2>
+        <div class="skill">
+            <p>Intrusion detection</p>
+            <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
+        </div>
+        <div class="skill">
+            <p>Cloud computing</p>
+            <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
+        </div>
+        <div class="skill">
+            <p>Critical thinking and problem-solving</p>
+            <div class="skill-bar"><div class="skill-progress" data-width="95%"></div></div>
+        </div>
+        <div class="skill">
+            <p>Ethical hacking</p>
+            <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
+        </div>
+    </section>
+
+    <section class="section hidden">
+        <h2>Work Experience</h2>
+        <div class="job">
+            <h3>SOC Analyst</h3>
+            <p>RRG Engineering Technologies Pvt. Ltd, Hyderabad, Telangana</p>
+            <p>December 2022 - August 2024</p>
+            <p>Project: Nuclear Fuel Complex, Department of Atomic Energy, India</p>
+            <ul>
+                <li>Monitored computer virus reports and updated virus protection systems</li>
+                <li>Conducted security audits to identify vulnerabilities</li>
+                <li>Monitored data file usage and regulated access to secure information</li>
+                <li>Developed, tested and implemented security policies, plans and procedures</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section hidden">
+        <h2>Education</h2>
+        <ul>
+            <li>Bachelor of Technology - BTech: Computer Science & Engineering, Manipal University - Jaipur (2019-2022)</li>
+            <li>Diploma: Computer Hardware & Network Administrator, IANT - New Delhi (2017-2019)</li>
+            <li>Diploma: Computer Science & Engineering, Diploma Wing of Hindu College of Engineering - Sonipat (2013-2016)</li>
+        </ul>
+    </section>
+
+    <section class="section hidden">
+        <h2>Certifications</h2>
+        <ul>
+            <li>CompTIA A+, CCNA, Network+, Security+, Cloud+</li>
+            <li>Red Hat Certified System Administrator (RHCSA)</li>
+            <li>Ethical Hacking Expert - Star Certification</li>
+            <li>CompTIA IT Fundamentals+</li>
+            <li>Microsoft Certified: Azure Security Engineer Associate (Undertaking)</li>
+        </ul>
+    </section>
+</div>
+
+
+<script>
+    // Particle.js configuration for the header background
+    particlesJS("particles-js", {
+        particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } },
+            color: { value: "#ffffff" },
+            shape: { type: "circle" },
+            opacity: { value: 0.5, random: false },
+            size: { value: 3, random: true },
+            line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+            move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
+        },
+        interactivity: {
+            detect_on: "canvas",
+            events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
+            modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+        },
+        retina_detect: true
+    });
+
+    // Animate sections on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        });
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    // Animate skill bars
+    function animateSkillBars() {
+        const skillBars = document.querySelectorAll('.skill-progress');
+        skillBars.forEach(bar => {
+            const width = bar.getAttribute('data-width');
+            bar.style.width = width;
+        });
+    }
+
+    // Call animateSkillBars when the skills section becomes visible
+    const skillsSection = document.querySelector('.section:nth-child(3)');
+    const skillsObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            animateSkillBars();
+            skillsObserver.unobserve(skillsSection);
+        }
+    });
+    skillsObserver.observe(skillsSection);
+</script>
