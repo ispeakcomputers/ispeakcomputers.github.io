@@ -6,96 +6,90 @@
     <title>Aditya Jain - Security Operations and Cloud Security Engineer</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             color: #333;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            overflow: hidden;
         }
         h1, h2 {
             color: #2c3e50;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
         .section {
+            background-color: #fff;
             margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-5px);
         }
         .job {
             margin-bottom: 15px;
         }
+        .skill-bar {
+            background-color: #ecf0f1;
+            height: 20px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .skill-progress {
+            background-color: #3498db;
+            height: 100%;
+            border-radius: 10px;
+            width: 0;
+            transition: width 1s ease-out;
+        }
+        .hidden {
+            opacity: 0;
+            filter: blur(5px);
+            transform: translateX(-100%);
+            transition: all 1s;
+        }
+        .show {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateX(0);
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
     </style>
 </head>
 <body>
+    <header>
+        <div id="particles-js"></div>
+        <h1>Aditya Jain</h1>
+        <p>Security Operations and Cloud Security Engineer</p>
+    </header>
+
     <div class="container">
-        <header>
-            <h1>Aditya Jain</h1>
-            <p>Security Operations and Cloud Security Engineer</p>
-        </header>
-
-        <section class="section">
-            <h2>Contact Information</h2>
-            <p>Location: Jaipur, India</p>
-            <p>Phone: +91 98975-77007</p>
-            <p>Email: aavkjain@hotmail.com</p>
-            <p>Website: <a href="https://ispeakcomputers.github.io">https://ispeakcomputers.github.io</a></p>
-        </section>
-
-        <section class="section">
-            <h2>Professional Summary</h2>
-            <p>Cyber security enthusiast with over 4.6 years of experience in monitoring, detecting, analyzing, and responding to cyber threats and incidents. Skilled in using various security tools and technologies, such as SIEM, IDS/IPS, firewall, antivirus, and vulnerability scanner. Proficient in conducting security research, threat intelligence, incident response, and forensic analysis.</p>
-        </section>
-
-        <section class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li>Intrusion detection</li>
-                <li>Cloud computing</li>
-                <li>Critical thinking and problem-solving</li>
-                <li>Excellent Communication</li>
-                <li>Ethical hacking</li>
-                <li>Creativity</li>
-                <li>Team Work</li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h2>Work Experience</h2>
-            <div class="job">
-                <h3>SOC Analyst</h3>
-                <p>RRG Engineering Technologies Pvt. Ltd, Hyderabad, Telangana</p>
-                <p>December 2022 - August 2024</p>
-                <p>Project: Nuclear Fuel Complex, Department of Atomic Energy, India</p>
-                <ul>
-                    <li>Monitored computer virus reports and updated virus protection systems</li>
-                    <li>Conducted security audits to identify vulnerabilities</li>
-                    <li>Monitored data file usage and regulated access to secure information</li>
-                    <li>Developed, tested and implemented security policies, plans and procedures</li>
-                </ul>
-            </div>
-            <!-- Add other job experiences similarly -->
-        </section>
-
-        <section class="section">
-            <h2>Education</h2>
-            <ul>
-                <li>Bachelor of Technology - BTech: Computer Science & Engineering, Manipal University - Jaipur (2019-2022)</li>
-                <li>Diploma: Computer Hardware & Network Administrator, IANT - New Delhi (2017-2019)</li>
-                <li>Diploma: Computer Science & Engineering, Diploma Wing of Hindu College of Engineering - Sonipat (2013-2016)</li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h2>Certifications</h2>
-            <ul>
-                <li>CompTIA A+, CCNA, Network+, Security+, Cloud+</li>
-                <li>Red Hat Certified System Administrator (RHCSA)</li>
-                <li>Ethical Hacking Expert - Star Certification</li>
-                <li>CompTIA IT Fundamentals+</li>
-                <li>Microsoft Certified: Azure Security Engineer Associate (Undertaking)</li>
-            </ul>
-        </section>
+        <!-- Content sections go here -->
     </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // JavaScript code will go here
+    </script>
 </body>
 </html>
