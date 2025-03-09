@@ -3,273 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animesh Jain - Security Operations and Cloud Security Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Aditya Jain - Cybersecurity Professional</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --main-bg-color: #0a0e17;
-            --secondary-bg-color: #1a1f2e;
-            --text-color: #00ff00;
-            --highlight-color: #00ffff;
-            --accent-color: #ff00ff;
+            --primary-color: #2A3F54;
+            --accent-color: #1ABB9C;
         }
         body {
-            font-family: 'Share Tech Mono', monospace;
+            font-family: 'Segoe UI', sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: var(--text-color);
-            background-color: var(--main-bg-color);
-            cursor: default;
         }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
+        .header {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+            border-bottom: 4px solid var(--accent-color);
         }
-        header {
-            background-color: var(--secondary-bg-color);
-            color: var(--highlight-color);
-            text-align: center;
-            padding: 1rem;
-            position: relative;
-            overflow: hidden;
-            border-bottom: 2px solid var(--accent-color);
+        .badge-custom {
+            background: var(--accent-color);
+            color: white;
         }
-        h1, h2 {
-            color: var(--highlight-color);
-            text-shadow: 0 0 10px var(--highlight-color);
+        .section-title {
+            color: var(--primary-color);
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1rem;
+            margin: 2rem 0;
         }
-        .section {
-            background-color: var(--secondary-bg-color);
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 15px rgba(0,255,255,0.1);
-            transition: all 0.3s ease;
-            border: 1px solid var(--accent-color);
-        }
-        .section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,255,255,0.2);
-        }
-        .job {
-            margin-bottom: 15px;
+        .timeline-item {
             border-left: 2px solid var(--accent-color);
-            padding-left: 10px;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
         }
-        .skill-bar {
-            background-color: var(--main-bg-color);
-            height: 20px;
-            border-radius: 10px;
-            margin-bottom: 10px;
-            overflow: hidden;
+        .skill-pill {
+            background: #f0f0f0;
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            margin: 0.3rem;
+            display: inline-block;
         }
-        .skill-progress {
-            background-color: var(--accent-color);
-            height: 100%;
-            border-radius: 10px;
-            width: 0;
-            transition: width 1s ease-out;
-            position: relative;
-        }
-        .skill-progress::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 10px,
-                rgba(0,0,0,0.1) 10px,
-                rgba(0,0,0,0.1) 20px
-            );
-        }
-        .hidden {
-            opacity: 0;
-            filter: blur(5px);
-            transform: translateX(-100%);
-            transition: all 1s;
-        }
-        .show {
-            opacity: 1;
-            filter: blur(0);
-            transform: translateX(0);
-        }
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-        }
-        .typing-effect {
-            overflow: hidden;
-            border-right: .15em solid var(--highlight-color);
-            white-space: nowrap;
-            margin: 0 auto;
-            letter-spacing: .15em;
-            animation: 
-                typing 3.5s steps(40, end),
-                blink-caret .75s step-end infinite;
-        }
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: var(--highlight-color); }
-        }
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .social-icons a {
-            color: var(--highlight-color);
-            font-size: 24px;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-        .social-icons a:hover {
-            color: var(--accent-color);
-        }
-        .spotify-widget {
-            margin-top: 20px;
-            text-align: center;
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 4rem;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div id="particles-js"></div>
-        <h1 class="typing-effect">Animesh Jain</h1>
-        <p>Security Operations and Cloud Security Engineer</p>
+    <!-- Header Section -->
+    <header class="header text-center">
+        <div class="container">
+            <h1 class="display-4 mb-3">Aditya Jain</h1>
+            <p class="lead">Cybersecurity Professional</p>
+            <div class="contact-info">
+                <p class="mb-1">📍 Noida, Uttar Pradesh, India</p>
+                <p class="mb-1">📞 7400588896 | ✉️ ajain10999@gmail.com</p>
+                <a href="https://linkedin.com/in/ispeakcomputers" class="text-white">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
     </header>
 
-    <div class="container">
-        <!-- Previous sections remain the same -->
-
-        <section class="section hidden">
-            <h2>Connect With Me</h2>
-            <div class="social-icons">
-                <a href="https://www.youtube.com/YOUR_YOUTUBE_CHANNEL" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.linkedin.com/in/animeshjainq" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/YOUR_INSTAGRAM" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-            </div>
+    <!-- Main Content -->
+    <main class="container my-5">
+        <!-- Professional Summary -->
+        <section>
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="lead">Cybersecurity professional with <strong>5+ years of experience</strong> in threat hunting, cloud security, and SOC operations. Certified in <strong>CISSP, CCSP, CompTIA ITF+</strong> with expertise in SIEM, IDS/IPS, and Azure/AWS environments.</p>
         </section>
 
-        <section class="section hidden">
-            <h2>Currently Listening To</h2>
-            <div class="spotify-widget">
-                <iframe src="https://open.spotify.com/embed/user/YOUR_SPOTIFY_USER_ID" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <!-- Experience -->
+        <section>
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline-item">
+                <h4>Security Administrator @ EbixCash</h4>
+                <p class="text-muted">Feb 2024 - Present</p>
+                <ul>
+                    <li>Reduced unauthorized access attempts by 25% through Checkpoint firewall policies</li>
+                    <li>Conducted AWS/Azure security audits for ISO 27001 compliance</li>
+                </ul>
+            </div>
+            <!-- Add other experiences following same pattern -->
+        </section>
+
+        <!-- Technical Skills -->
+        <section>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skill-pill">SIEM</div>
+            <div class="skill-pill">Azure Security</div>
+            <div class="skill-pill">MITRE ATT&CK</div>
+            <!-- Add other skills -->
+        </section>
+
+        <!-- Certifications -->
+        <section>
+            <h2 class="section-title">Certifications</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">CISSP</h5>
+                            <p class="text-muted">(ISC)²</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add other certifications -->
             </div>
         </section>
-    </div>
+    </main>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        // Particle.js configuration
-        particlesJS("particles-js", {
-            particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: "#00ff00" },
-                shape: { type: "triangle" },
-                opacity: { value: 0.5, random: false },
-                size: { value: 3, random: true },
-                line_linked: { enable: true, distance: 150, color: "#00ff00", opacity: 0.4, width: 1 },
-                move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
-                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
-            },
-            retina_detect: true
-        });
+    <footer class="text-center">
+        <div class="container">
+            <p>© 2024 Aditya Jain | Hosted on GitHub Pages</p>
+        </div>
+    </footer>
 
-        // Animate sections on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                } else {
-                    entry.target.classList.remove('show');
-                }
-            });
-        });
-
-        const hiddenElements = document.querySelectorAll('.hidden');
-        hiddenElements.forEach((el) => observer.observe(el));
-
-        // Animate skill bars
-        function animateSkillBars() {
-            const skillBars = document.querySelectorAll('.skill-progress');
-            skillBars.forEach(bar => {
-                const width = bar.getAttribute('data-width');
-                bar.style.width = width;
-            });
-        }
-
-        // Call animateSkillBars when the skills section becomes visible
-        const skillsSection = document.querySelector('.section:nth-child(3)');
-        const skillsObserver = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-                animateSkillBars();
-                skillsObserver.unobserve(skillsSection);
-            }
-        });
-        skillsObserver.observe(skillsSection);
-
-        // Add interactivity to sections
-        const sections = document.querySelectorAll('.section');
-        sections.forEach(section => {
-            section.addEventListener('mouseover', () => {
-                section.style.transform = 'scale(1.05)';
-            });
-            section.addEventListener('mouseout', () => {
-                section.style.transform = 'scale(1)';
-            });
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-.social-icons a {
-    color: var(--highlight-color);
-    font-size: 24px;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
-.social-icons a:hover {
-    color: var(--accent-color);
-}
-
-<section class="section hidden">
-    <h2>Currently Listening To</h2>
-    <div class="spotify-widget">
-        <iframe src="https://open.spotify.com/embed/user/YOUR_SPOTIFY_USER_ID" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
-</section>
-
-const sections = document.querySelectorAll('.section');
-sections.forEach(section => {
-    section.addEventListener('mouseover', () => {
-        section.style.transform = 'scale(1.05)';
-    });
-    section.addEventListener('mouseout', () => {
-        section.style.transform = 'scale(1)';
-    });
-});
