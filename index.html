@@ -1,126 +1,356 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aditya Jain - Cybersecurity Professional</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #2A3F54;
-            --accent-color: #1ABB9C;
-        }
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            line-height: 1.6;
-        }
-        .header {
-            background: var(--primary-color);
-            color: white;
-            padding: 3rem 0;
-            border-bottom: 4px solid var(--accent-color);
-        }
-        .badge-custom {
-            background: var(--accent-color);
-            color: white;
-        }
-        .section-title {
-            color: var(--primary-color);
-            border-left: 4px solid var(--accent-color);
-            padding-left: 1rem;
-            margin: 2rem 0;
-        }
-        .timeline-item {
-            border-left: 2px solid var(--accent-color);
-            padding-left: 2rem;
-            margin-bottom: 2rem;
-        }
-        .skill-pill {
-            background: #f0f0f0;
-            border-radius: 20px;
-            padding: 0.5rem 1rem;
-            margin: 0.3rem;
-            display: inline-block;
-        }
-        footer {
-            background: var(--primary-color);
-            color: white;
-            padding: 2rem 0;
-            margin-top: 4rem;
-        }
-    </style>
-</head>
-<body>
-    <!-- Header Section -->
-    <header class="header text-center">
-        <div class="container">
-            <h1 class="display-4 mb-3">Aditya Jain</h1>
-            <p class="lead">Cybersecurity Professional</p>
-            <div class="contact-info">
-                <p class="mb-1">📍 Noida, Uttar Pradesh, India</p>
-                <p class="mb-1">📞 7400588896 | ✉️ ajain10999@gmail.com</p>
-                <a href="https://linkedin.com/in/ispeakcomputers" class="text-white">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-            </div>
-        </div>
-    </header>
+/* General Body Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f7f9;
+    color: #333;
+    line-height: 1.6;
+}
 
-    <!-- Main Content -->
-    <main class="container my-5">
-        <!-- Professional Summary -->
-        <section>
-            <h2 class="section-title">Professional Summary</h2>
-            <p class="lead">Cybersecurity professional with <strong>5+ years of experience</strong> in threat hunting, cloud security, and SOC operations. Certified in <strong>CISSP, CCSP, CompTIA ITF+</strong> with expertise in SIEM, IDS/IPS, and Azure/AWS environments.</p>
-        </section>
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-        <!-- Experience -->
-        <section>
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="timeline-item">
-                <h4>Security Administrator @ EbixCash</h4>
-                <p class="text-muted">Feb 2024 - Present</p>
-                <ul>
-                    <li>Reduced unauthorized access attempts by 25% through Checkpoint firewall policies</li>
-                    <li>Conducted AWS/Azure security audits for ISO 27001 compliance</li>
-                </ul>
-            </div>
-            <!-- Add other experiences following same pattern -->
-        </section>
+/* Header & Navigation */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
 
-        <!-- Technical Skills -->
-        <section>
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skill-pill">SIEM</div>
-            <div class="skill-pill">Azure Security</div>
-            <div class="skill-pill">MITRE ATT&CK</div>
-            <!-- Add other skills -->
-        </section>
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+}
 
-        <!-- Certifications -->
-        <section>
-            <h2 class="section-title">Certifications</h2>
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">CISSP</h5>
-                            <p class="text-muted">(ISC)²</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add other certifications -->
-            </div>
-        </section>
-    </main>
+.nav-logo {
+    font-size: 1.5rem;
+    color: #0056b3;
+    margin: 0;
+}
 
-    <footer class="text-center">
-        <div class="container">
-            <p>© 2025 Aditya Jain | Hosted on GitHub Pages</p>
-        </div>
-    </footer>
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #0056b3;
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(to right, #0056b3, #007bff);
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-name {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.hero-location {
+    font-size: 1.1rem;
+}
+
+.hero-location i {
+    margin-right: 8px;
+}
+
+/* General Section Styling */
+.section {
+    padding: 60px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.section:last-of-type {
+    border-bottom: none;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #0056b3;
+}
+
+.section h2 i {
+    margin-right: 10px;
+}
+
+/* About Section */
+#about p {
+    font-size: 1.1rem;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.summary-title {
+    font-weight: bold;
+    color: #333;
+    text-align: center !important;
+}
+
+#about h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-left: 4px solid #007bff;
+    padding-left: 10px;
+}
+
+.expertise-list, .highlights-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.expertise-list li, .highlights-list li {
+    background: #e9f2ff;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-radius: 5px;
+    font-size: 1.05rem;
+}
+
+/* Experience Section - Timeline */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: #007bff;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1.5px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: -8px;
+    background-color: #fff;
+    border: 3px solid #007bff;
+    top: 25px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -8px;
+}
+
+.timeline-content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: #0056b3;
+}
+.company {
+    font-style: italic;
+    font-weight: 500;
+}
+.date {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+    background-color: #e9f2ff;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+/* Education Section */
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.education-item {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.education-item h3 {
+    color: #0056b3;
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+.education-item p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+.education-item span {
+    color: #555;
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skills-column {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    width: 45%;
+    min-width: 300px;
+}
+
+.skills-column h3 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #0056b3;
+}
+
+.skills-list, .certs-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li, .certs-list li {
+    font-size: 1.1rem;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.skills-list li i {
+    margin-right: 12px;
+    color: #007bff;
+}
+
+.certs-list li:before {
+    content: "✓";
+    margin-right: 12px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Contact Section */
+.contact-info {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.contact-info p {
+    margin: 15px 0;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #007bff;
+    transition: text-decoration 0.3s;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Simple hiding for small screens, can be replaced with a hamburger menu */
+    }
+    
+    .timeline::after {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 15px;
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+
+    .timeline-item::after {
+        left: 12px;
+    }
+    
+    .skills-column {
+        width: 100%;
+    }
+}
