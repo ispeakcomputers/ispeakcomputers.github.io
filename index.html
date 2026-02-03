@@ -3,207 +3,329 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aditya Jain - Cybersecurity Administrator</title>
+    <title>Aditya Jain • Cybersecurity Operator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Courier New', Courier, monospace;
+        :root {
+            --bg: #000000;
+            --text: #00ff41;
+            --accent: #00cc33;
+            --glow: rgba(0, 255, 65, 0.6);
+        }
+
+        * {
             margin: 0;
             padding: 0;
-            background-color: #0a0a0a;
-            color: #00ff00;
-            line-height: 1.6;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Matrix Rain Background */
+        canvas#matrix {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: -2;
+            opacity: 0.25;
+        }
+
         header {
-            background-color: #000;
-            padding: 20px;
+            padding: 60px 20px 40px;
             text-align: center;
-            border-bottom: 2px solid #00ff00;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+            position: relative;
+            z-index: 1;
         }
-        header img {
-            max-width: 150px;
-            height: auto;
-            margin-right: 20px;
-            border: 2px solid #00ff00;
+
+        .logo {
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
+            border: 3px solid var(--text);
+            box-shadow: 0 0 30px var(--glow);
+            margin-bottom: 20px;
+            object-fit: cover;
         }
-        header .header-text {
-            text-align: left;
-        }
+
         h1 {
-            font-size: 2.5em;
-            margin: 0;
-            color: #00ff00;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            letter-spacing: 6px;
+            text-shadow: 0 0 20px var(--glow), 0 0 40px var(--glow);
+            margin-bottom: 8px;
         }
+
         h2 {
-            font-size: 1.5em;
-            margin: 5px 0;
-            color: #00cc00;
+            font-size: 1.6rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+            text-shadow: 0 0 15px var(--glow);
         }
+
         .contact {
-            font-size: 1em;
-            color: #00ff00;
+            font-size: 1.1rem;
+            margin: 10px 0;
         }
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #111;
-            border: 1px solid #00ff00;
-            box-shadow: 0 0 10px #00ff00;
-        }
-        h3 {
-            text-transform: uppercase;
-            font-size: 1.8em;
-            margin-top: 30px;
-            margin-bottom: 10px;
-            color: #00ff00;
-            border-bottom: 1px dashed #00ff00;
-        }
-        h4 {
-            font-size: 1.2em;
-            margin-bottom: 5px;
-            color: #00cc00;
-        }
-        p {
-            margin-top: 0;
-            margin-bottom: 15px;
-        }
-        ul {
-            list-style-type: square;
-            padding-left: 20px;
-            margin-bottom: 15px;
-        }
-        .job-title {
-            font-weight: bold;
-            color: #00ff00;
-        }
-        .company {
-            font-style: italic;
-            color: #00cc00;
-        }
-        .date {
-            font-size: 0.9em;
-            color: #008800;
-        }
-        a {
-            color: #00ff00;
+
+        .contact a {
+            color: var(--text);
             text-decoration: none;
+            transition: all 0.3s;
         }
-        a:hover {
-            text-decoration: underline;
+
+        .contact a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 15px #fff;
         }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        section {
+            margin: 50px 0;
+            padding: 30px;
+            background: rgba(10, 10, 10, 0.7);
+            border: 1px solid var(--accent);
+            border-radius: 8px;
+            box-shadow: 0 0 25px rgba(0, 255, 65, 0.15);
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+
+        section:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 40px rgba(0, 255, 65, 0.35);
+        }
+
+        h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            color: var(--text);
+            margin-bottom: 25px;
+            border-bottom: 2px dashed var(--accent);
+            padding-bottom: 10px;
+            text-shadow: 0 0 15px var(--glow);
+        }
+
+        h4 {
+            font-size: 1.4rem;
+            color: #00ff80;
+            margin: 20px 0 10px;
+        }
+
+        .meta {
+            color: #00aa55;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin: 12px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        ul li:before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .glitch {
+            position: relative;
+            display: inline-block;
+        }
+
+        .glitch:hover::before,
+        .glitch:hover::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+        }
+
+        .glitch:hover::before {
+            left: 2px;
+            text-shadow: -2px 0 #ff00c1;
+            animation: glitch-anim 2s infinite;
+        }
+
+        .glitch:hover::after {
+            left: -2px;
+            text-shadow: 2px 0 #00ffff;
+            animation: glitch-anim2 3s infinite;
+        }
+
+        @keyframes glitch-anim {
+            0% { clip: rect(42px, 9999px, 44px, 0); transform: skew(0.6deg); }
+            5% { clip: rect(17px, 9999px, 59px, 0); transform: skew(0.9deg); }
+            /* ... truncated for brevity, full glitch animation can be found online */
+            100% { clip: rect(68px, 9999px, 29px, 0); transform: skew(0.2deg); }
+        }
+
+        @keyframes glitch-anim2 {
+            0% { clip: rect(65px, 9999px, 100px, 0); transform: skew(0.4deg); }
+            /* similar truncated */
+            100% { clip: rect(95px, 9999px, 66px, 0); transform: skew(0.7deg); }
+        }
+
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-            }
-            header img {
-                margin-right: 0;
-                margin-bottom: 10px;
-            }
+            h1 { font-size: 2.8rem; }
+            section { padding: 20px; }
         }
     </style>
 </head>
 <body>
 
+    <canvas id="matrix"></canvas>
+
     <header>
-        <img src="https://c0c0n.org/images/mastering-telecom-security.jpg" alt="Cybersecurity Logo">
-        <div class="header-text">
-            <h1>ADITYA JAIN</h1>
-            <h2>Cybersecurity Administrator</h2>
-            <p class="contact">Noida, Uttar Pradesh, India | Open to relocation / hybrid roles across India</p>
-            <p class="contact">+91 9897577007 | <a href="mailto:aavkjain@hotmail.com">aavkjain@hotmail.com</a> | <a href="https://linkedin.com/in/ajainx1">linkedin.com/in/ajainx1</a></p>
-        </div>
+        <img src="https://thumbs.dreamstime.com/b/vibrant-green-skull-crossbones-symbol-prominently-displayed-against-backdrop-flowing-green-binary-code-representing-427699021.jpg" alt="Cybersecurity Hacker Logo" class="logo">
+        <h1>ADITYA JAIN</h1>
+        <h2>Cybersecurity Administrator</h2>
+        <p class="contact">Noida, Uttar Pradesh, India  |  Open to Relocation / Hybrid Roles Across India</p>
+        <p class="contact">+91 9897577007  |  <a href="mailto:aavkjain@hotmail.com">aavkjain@hotmail.com</a>  |  <a href="https://linkedin.com/in/ajainx1" target="_blank">linkedin.com/in/ajainx1</a></p>
     </header>
 
     <div class="container">
 
-        <h3>PROFESSIONAL SUMMARY</h3>
-        <p>Dynamic and results-oriented Cybersecurity Administrator with over 3 years of hands-on experience in Security Operations Center (SOC) operations, SIEM/EDR deployment, incident response, and compliance automation. Proven expertise in supporting and securing large-scale government and enterprise environments by optimizing monitoring systems, enhancing threat detection, and strengthening organizational resilience against evolving cyber threats. Adept in threat hunting, infrastructure management, remote firewall administration, log analysis, and automation engineering — delivering measurable business impact through secure, efficient, and scalable solutions. Seeking opportunities in multinational corporations to drive cybersecurity excellence on a global scale.</p>
+        <section>
+            <h3 class="glitch" data-text="PROFESSIONAL SUMMARY">PROFESSIONAL SUMMARY</h3>
+            <p>Dynamic and results-oriented Cybersecurity Administrator with over 3 years of hands-on experience in SOC operations, SIEM/EDR deployment, incident response, and compliance automation. Proven track record securing large-scale government and enterprise environments — optimizing monitoring, enhancing threat detection, and building resilience against evolving threats. Skilled in threat hunting, remote firewall admin, log forensics, PowerShell automation. Actively seeking global roles in multinational organizations to elevate cybersecurity posture.</p>
+        </section>
 
-        <h3>CORE COMPETENCIES</h3>
-        <ul>
-            <li>SOC Operations & 24/7 Monitoring</li>
-            <li>SIEM & EDR Deployment</li>
-            <li>Incident Response & Threat Detection</li>
-            <li>Firewall Administration (Check Point, Sophos, WiJungle NGFW)</li>
-            <li>Remote Access & Log Analysis (Firewalls, Event Viewer, SentinelOne, KACE UEM)</li>
-            <li>Vulnerability Assessment & Remediation</li>
-            <li>Compliance Automation & Audit Support</li>
-            <li>PowerShell Scripting & Automation</li>
-            <li>IDS Signature Development</li>
-            <li>Endpoint Security Management</li>
-            <li>Network Traffic Analysis</li>
-        </ul>
+        <section>
+            <h3 class="glitch" data-text="CORE COMPETENCIES">CORE COMPETENCIES</h3>
+            <ul>
+                <li>SOC Operations & 24/7 Real-Time Monitoring</li>
+                <li>SIEM & EDR Deployment (Wazuh, Blu Sapphire, SentinelOne, Kaspersky)</li>
+                <li>Incident Response, Threat Hunting & Containment</li>
+                <li>Firewall Administration (Check Point, Sophos, WiJungle NGFW)</li>
+                <li>Remote Log Analysis & Forensics (Event Viewer, EDR, UEM)</li>
+                <li>Vulnerability Assessment, Remediation & Patch Management</li>
+                <li>Compliance Automation, CDAC Audit Support & Reporting</li>
+                <li>PowerShell Scripting & Security Automation Engineering</li>
+                <li>IDS Signature Creation & Network Traffic Analysis</li>
+            </ul>
+        </section>
 
-        <h3>PROFESSIONAL EXPERIENCE</h3>
+        <section>
+            <h3 class="glitch" data-text="PROFESSIONAL EXPERIENCE">PROFESSIONAL EXPERIENCE</h3>
 
-        <h4 class="job-title">Security Administrator</h4>
-        <p class="company">EbixCash, Noida, India</p>
-        <p class="date">February 2024 – Present</p>
-        <ul>
-            <li>Orchestrated deployment and management of SentinelOne EDR across 750+ National Informatics Centre (NIC) offices statewide, delivering comprehensive endpoint protection and real-time threat visibility.</li>
-            <li>Implemented Unified Endpoint Management (UEM) KACE solution for 400+ state center devices, streamlining configuration, patch management, and compliance enforcement.</li>
-            <li>Administered and optimized Check Point firewall operations, configuring traffic policies, access controls, and security rules to secure network communications.</li>
-            <li>Managed remote access to district-deployed firewalls (Sophos and WiJungle Next-Generation Firewalls — NGFW), performing configuration updates, policy enforcement, monitoring, and troubleshooting across distributed environments.</li>
-            <li>Conducted in-depth remote log analysis using firewall logs, Windows Event Viewer, SentinelOne EDR, and KACE UEM to extract security intelligence, detect anomalies, support forensic investigations, and enable rapid incident response.</li>
-            <li>Engineered PowerShell-based automation framework to validate 120+ CDAC compliance standards, reducing audit preparation time by 60% via automated verification, reporting, and remediation.</li>
-            <li>Collaborated with CERT-In and development teams to assess vulnerabilities, remediate critical issues in web applications and C2C server infrastructure.</li>
-            <li>Managed end-to-end audit compliance, ensuring adherence to organizational policies, regulatory standards, and industry best practices.</li>
-            <li>Performed advanced incident investigations using Windows Event Viewer, system logs, and forensic tools to identify root causes, contain threats, and implement preventive controls.</li>
-            <li>Leveraged Advanced Excel with Copilot for security analytics, data visualization, trend analysis, and executive reporting.</li>
-            <li>Supported critical infrastructure security, including CCTV and fire safety system monitoring for high-stakes facilities.</li>
-        </ul>
+            <h4>Security Administrator</h4>
+            <p class="meta">EbixCash, Noida, India  •  Feb 2024 – Present</p>
+            <ul>
+                <li>Led SentinelOne EDR rollout across 750+ NIC offices — full endpoint visibility & protection</li>
+                <li>Deployed KACE UEM for 400+ devices — automated patching, config & compliance</li>
+                <li>Managed & hardened Check Point firewalls + remote Sophos/WiJungle NGFW fleet</li>
+                <li>Built PowerShell compliance validation suite — cut audit prep time by 60%</li>
+                <li>Performed deep forensic log analysis & incident investigations (Event Viewer, EDR, firewalls)</li>
+                <li>Coordinated with CERT-In — vuln remediation in web apps & C2C infrastructure</li>
+            </ul>
 
-        <h4 class="job-title">Security Operations Center Analyst</h4>
-        <p class="company">RRG Engineering Technologies Pvt. Ltd., Noida, India</p>
-        <p class="date">December 2022 – July 2023</p>
-        <ul>
-            <li>Conducted real-time security event monitoring and proactive threat detection using Blu Sapphire SIEM platform.</li>
-            <li>Executed threat hunting to identify advanced persistent threats (APTs), anomalous behaviors, and sophisticated attack vectors.</li>
-            <li>Deployed Kaspersky EDR for rapid endpoint threat identification, investigation, and response — reducing mean time to resolution.</li>
-            <li>Optimized SIEM correlation rules and EDR detection policies, improving threat detection efficiency by 35% and reducing false positives.</li>
-            <li>Produced actionable intelligence reports on emerging threats, attack patterns, and risk trends.</li>
-            <li>Led incident response focusing on containment, eradication, recovery, and post-incident improvement.</li>
-        </ul>
+            <h4>Security Operations Center Analyst</h4>
+            <p class="meta">RRG Engineering Technologies Pvt. Ltd., Noida  •  Dec 2022 – Jul 2023</p>
+            <ul>
+                <li>Real-time threat detection & hunting via Blu Sapphire SIEM</li>
+                <li>Deployed & tuned Kaspersky EDR — reduced MTTR significantly</li>
+                <li>Optimized correlation rules — 35% better detection, fewer false positives</li>
+                <li>Authored threat intelligence reports on APTs & emerging campaigns</li>
+            </ul>
 
-        <h4 class="job-title">Security Operations Center Analyst</h4>
-        <p class="company">E2E Networks Limited, Noida, India</p>
-        <p class="date">August 2022 – October 2022</p>
-        <ul>
-            <li>Monitored and investigated alerts in 24/7 SOC environment for continuous threat detection and response.</li>
-            <li>Configured and managed WAZUH SIEM for log analysis, event correlation, and distributed security monitoring.</li>
-            <li>Developed and implemented IDS signatures to detect network-based attacks and malicious activities.</li>
-            <li>Utilized AbuseIPDB threat intelligence to block malicious IPs and prevent attacks.</li>
-            <li>Performed email security assessments, vulnerability analysis, and network bandwidth monitoring to detect anomalies.</li>
-            <li>Created incident tickets and coordinated Tier 2 escalations.</li>
-            <li>Contributed to SOC SOPs, training materials, and process improvements.</li>
-        </ul>
+            <h4>Security Operations Center Analyst</h4>
+            <p class="meta">E2E Networks Limited, Noida  •  Aug 2022 – Oct 2022</p>
+            <ul>
+                <li>24/7 alert monitoring & investigation in Wazuh SIEM environment</li>
+                <li>Created custom IDS signatures & leveraged AbuseIPDB intel</li>
+                <li>Contributed to SOC playbooks, training & process refinement</li>
+            </ul>
 
-        <h4 class="job-title">Technical Support Executive</h4>
-        <p class="company">Teleperformance, Noida, India</p>
-        <p class="date">December 2021 – May 2022</p>
-        <ul>
-            <li>Provided enterprise-grade support for Microsoft products via phone/chat, resolving complex issues with high customer satisfaction.</li>
-            <li>Diagnosed technical problems using root-cause analysis and troubleshooting.</li>
-            <li>Managed tickets in high-volume environment, ensuring adherence to SLAs and data protection standards.</li>
-        </ul>
+            <h4>Technical Support Executive</h4>
+            <p class="meta">Teleperformance, Noida  •  Dec 2021 – May 2022</p>
+            <ul>
+                <li>Enterprise Microsoft support — high-volume ticket resolution & SLA adherence</li>
+            </ul>
+        </section>
 
-        <h3>CERTIFICATIONS</h3>
-        <ul>
-            <li>Fortinet Certified Associate in Cybersecurity (Issued Jan 2026 – Expires Jan 2028)</li>
-            <li>In the Trenches: Security Operations Center (EC-Council)</li>
-            <li>Autopsy Basics and Hands On (BasisTech)</li>
-            <li>CISSP CyberFrat (Issued Mar 2025)</li>
-            <li>Cybersecurity Foundations (LinkedIn, Issued Nov 2025)</li>
-            <li>Red Hat Certified System Administrator (RHCSA) (Issued Jan 2018 – Expired Jan 2021)</li>
-            <li>Ethical Hacking Expert (Star Certification) (Issued Jan 2019 – Expired Jan 2022)</li>
-        </ul>
+        <section>
+            <h3 class="glitch" data-text="CERTIFICATIONS">CERTIFICATIONS</h3>
+            <ul>
+                <li>Fortinet Certified Associate in Cybersecurity (Jan 2026 – Jan 2028)</li>
+                <li>In the Trenches: Security Operations Center (EC-Council)</li>
+                <li>Autopsy Basics and Hands On (BasisTech)</li>
+                <li>CISSP CyberFrat (Mar 2025)</li>
+                <li>Cybersecurity Foundations (LinkedIn, Nov 2025)</li>
+                <li>Red Hat Certified System Administrator (RHCSA) — Expired 2021</li>
+                <li>Ethical Hacking Expert (Star Certification) — Expired 2022</li>
+            </ul>
+        </section>
 
     </div>
+
+    <script>
+        // Simple Matrix Rain Effect
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+
+        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
+
+        const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*';
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+
+        const drops = Array(Math.floor(columns)).fill(1);
+
+        function draw() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#00ff41';
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = chars.charAt(Math.floor(Math.random() * chars.length));
+                const x = i * fontSize;
+                const y = drops[i] * fontSize;
+
+                ctx.fillText(text, x, y);
+
+                if (y > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        setInterval(draw, 35);
+
+        window.addEventListener('resize', () => {
+            canvas.height = window.innerHeight;
+            canvas.width = window.innerWidth;
+        });
+    </script>
 
 </body>
 </html>
